@@ -1,13 +1,15 @@
 :root {
-    --paper: #f7f7f5;
+    --paper: #f4f9fa;
     --surface: #ffffff;
-    --ink: #121418;
-    --muted: #646a72;
-    --line: #cfd2d5;
-    --line-dark: #34383f;
-    --blue: #1f4ed8;
-    --blue-dark: #173ba3;
-    --dark: #14171c;
+    --ink: #071a1f;
+    --muted: #526268;
+    --line: #cadadd;
+    --line-dark: #244047;
+    --blue: #007e8a;
+    --blue-dark: #005b65;
+    --cyan: #65d9e4;
+    --lime: #c9f36b;
+    --dark: #071a1f;
     --sans: "IBM Plex Sans", Arial, sans-serif;
     --serif: "IBM Plex Serif", Georgia, serif;
     --shell: 1240px;
@@ -86,7 +88,7 @@ button {
     position: sticky;
     z-index: 50;
     top: 0;
-    background: rgba(247, 247, 245, 0.96);
+    background: rgba(255, 255, 255, 0.96);
     border-bottom: 1px solid var(--line);
     backdrop-filter: blur(12px);
 }
@@ -174,18 +176,19 @@ button {
 }
 
 .hero {
-    padding: 88px 0 0;
+    padding: 72px 0 0;
+    background: var(--surface);
 }
 
 .hero-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.42fr) minmax(310px, 0.58fr);
-    gap: clamp(60px, 8vw, 122px);
-    align-items: end;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: clamp(56px, 8vw, 120px);
+    align-items: center;
 }
 
 .hero-copy {
-    padding: 40px 0 88px;
+    padding: 34px 0 70px;
 }
 
 .eyebrow {
@@ -209,9 +212,9 @@ h1, h2, blockquote {
 h1 {
     max-width: 870px;
     margin-bottom: 34px;
-    font-size: clamp(4rem, 7vw, 7rem);
-    line-height: 0.98;
-    letter-spacing: -0.055em;
+    font-size: clamp(3.6rem, 6.1vw, 6rem);
+    line-height: 1;
+    letter-spacing: -0.05em;
 }
 
 .hero-intro {
@@ -250,15 +253,32 @@ h1 {
 }
 
 .portrait-block {
+    position: relative;
+    z-index: 1;
+    width: 286px;
     margin: 0;
+    justify-self: end;
+    align-self: center;
+}
+
+.portrait-block::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 14px;
+    right: -14px;
+    width: 100%;
+    height: calc(100% - 31px);
+    background: var(--cyan);
 }
 
 .portrait-block img {
-    width: 100%;
-    aspect-ratio: 4 / 5;
+    width: 286px;
+    aspect-ratio: 4 / 4.65;
     object-fit: cover;
     object-position: center 18%;
-    filter: grayscale(100%) contrast(1.04);
+    filter: grayscale(100%) contrast(1.06);
+    border: 1px solid var(--ink);
 }
 
 .portrait-block figcaption {
@@ -275,7 +295,7 @@ h1 {
 .evidence-line {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-top: 0;
+    margin-top: 54px;
     border-top: 1px solid var(--ink);
 }
 
@@ -399,7 +419,7 @@ h2 {
 
 .focus-list article > span {
     padding-top: 4px;
-    color: #8690a0;
+    color: var(--cyan);
     font-size: 0.75rem;
 }
 
@@ -413,7 +433,7 @@ h2 {
 .focus-list p {
     max-width: 720px;
     margin-bottom: 0;
-    color: #aeb4bd;
+    color: #b6c8cc;
 }
 
 .experience h2 {
@@ -472,8 +492,8 @@ h2 {
 }
 
 .principles {
-    background: var(--blue);
-    color: #fff;
+    background: var(--lime);
+    color: var(--ink);
 }
 
 .principles-grid {
@@ -483,7 +503,7 @@ h2 {
 }
 
 .principles .eyebrow {
-    color: #d8e2ff;
+    color: var(--blue-dark);
 }
 
 blockquote {
@@ -498,7 +518,7 @@ blockquote {
     grid-column: 2;
     max-width: 690px;
     margin: 16px 0 0;
-    color: #dbe4ff;
+    color: #2d474e;
     font-size: 1rem;
 }
 
@@ -591,12 +611,17 @@ blockquote {
     }
 
     .hero-grid {
-        grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+        grid-template-columns: minmax(0, 1fr) 260px;
         gap: 48px;
     }
 
     .hero-copy {
         padding-bottom: 60px;
+    }
+
+    .portrait-block,
+    .portrait-block img {
+        width: 246px;
     }
 
     .two-column {
@@ -702,7 +727,13 @@ blockquote {
     }
 
     .portrait-block {
-        width: min(100%, 480px);
+        width: 210px;
+        justify-self: start;
+        margin-left: 0;
+    }
+
+    .portrait-block img {
+        width: 210px;
     }
 
     .evidence-line {
