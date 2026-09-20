@@ -255,7 +255,7 @@ h1 {
 .portrait-block {
     position: relative;
     z-index: 1;
-    width: 176px;
+    width: 164px;
     margin: 36px 14px 0 0;
     justify-self: end;
     align-self: start;
@@ -268,13 +268,14 @@ h1 {
     top: 10px;
     right: -10px;
     width: 100%;
-    height: calc(100% - 28px);
+    height: 164px;
     background: var(--cyan);
 }
 
 .portrait-block img {
-    width: 176px;
-    aspect-ratio: 1 / 1.08;
+    width: 164px;
+    height: 164px;
+    aspect-ratio: 1;
     object-fit: cover;
     object-position: center 18%;
     filter: grayscale(100%) contrast(1.06);
@@ -620,7 +621,12 @@ blockquote {
 
     .portrait-block,
     .portrait-block img {
-        width: 148px;
+        width: 144px;
+    }
+
+    .portrait-block img,
+    .portrait-block::before {
+        height: 144px;
     }
 
     .two-column {
@@ -726,13 +732,18 @@ blockquote {
     }
 
     .portrait-block {
-        width: 128px;
+        width: 120px;
         justify-self: start;
         margin: 0 0 28px;
     }
 
     .portrait-block img {
-        width: 128px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .portrait-block::before {
+        height: 120px;
     }
 
     .evidence-line {
