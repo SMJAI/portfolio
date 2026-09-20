@@ -176,19 +176,19 @@ button {
 }
 
 .hero {
-    padding: 72px 0 0;
+    padding: 62px 0 0;
     background: var(--surface);
 }
 
 .hero-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 320px;
-    gap: clamp(56px, 8vw, 120px);
-    align-items: center;
+    grid-template-columns: minmax(0, 1fr) 190px;
+    gap: clamp(44px, 6vw, 88px);
+    align-items: start;
 }
 
 .hero-copy {
-    padding: 34px 0 70px;
+    padding: 44px 0 64px;
 }
 
 .eyebrow {
@@ -210,11 +210,11 @@ h1, h2, blockquote {
 }
 
 h1 {
-    max-width: 870px;
+    max-width: 980px;
     margin-bottom: 34px;
-    font-size: clamp(3.6rem, 6.1vw, 6rem);
-    line-height: 1;
-    letter-spacing: -0.05em;
+    font-size: clamp(3.25rem, 5.25vw, 5.25rem);
+    line-height: 1.02;
+    letter-spacing: -0.046em;
 }
 
 .hero-intro {
@@ -255,26 +255,26 @@ h1 {
 .portrait-block {
     position: relative;
     z-index: 1;
-    width: 286px;
-    margin: 0;
+    width: 176px;
+    margin: 36px 14px 0 0;
     justify-self: end;
-    align-self: center;
+    align-self: start;
 }
 
 .portrait-block::before {
     content: "";
     position: absolute;
     z-index: -1;
-    top: 14px;
-    right: -14px;
+    top: 10px;
+    right: -10px;
     width: 100%;
-    height: calc(100% - 31px);
+    height: calc(100% - 28px);
     background: var(--cyan);
 }
 
 .portrait-block img {
-    width: 286px;
-    aspect-ratio: 4 / 4.65;
+    width: 176px;
+    aspect-ratio: 1 / 1.08;
     object-fit: cover;
     object-position: center 18%;
     filter: grayscale(100%) contrast(1.06);
@@ -282,12 +282,11 @@ h1 {
 }
 
 .portrait-block figcaption {
-    display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 13px 0 0;
+    display: grid;
+    gap: 2px;
+    padding: 11px 0 0;
     color: var(--muted);
-    font-size: 0.72rem;
+    font-size: 0.66rem;
     letter-spacing: 0.04em;
     text-transform: uppercase;
 }
@@ -295,7 +294,7 @@ h1 {
 .evidence-line {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-top: 54px;
+    margin-top: 12px;
     border-top: 1px solid var(--ink);
 }
 
@@ -611,8 +610,8 @@ blockquote {
     }
 
     .hero-grid {
-        grid-template-columns: minmax(0, 1fr) 260px;
-        gap: 48px;
+        grid-template-columns: minmax(0, 1fr) 160px;
+        gap: 38px;
     }
 
     .hero-copy {
@@ -621,7 +620,7 @@ blockquote {
 
     .portrait-block,
     .portrait-block img {
-        width: 246px;
+        width: 148px;
     }
 
     .two-column {
@@ -709,11 +708,11 @@ blockquote {
 
     .hero-grid {
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: 8px;
     }
 
     .hero-copy {
-        padding: 12px 0 32px;
+        padding: 12px 0 24px;
     }
 
     h1 {
@@ -727,13 +726,13 @@ blockquote {
     }
 
     .portrait-block {
-        width: 210px;
+        width: 128px;
         justify-self: start;
-        margin-left: 0;
+        margin: 0 0 28px;
     }
 
     .portrait-block img {
-        width: 210px;
+        width: 128px;
     }
 
     .evidence-line {
